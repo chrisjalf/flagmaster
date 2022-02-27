@@ -96,7 +96,6 @@ var countries = [
     Country("GB-NIR", "Northern Ireland"),
     Country("GB-SCT", "Scotland"),
     Country("GB-WLS", "Wales"),
-    Country("GB-ZET", "Shetland"),
     Country("GD", "Grenada"),
     Country("GE", "Georgia"),
     Country("GF", "French Guiana"),
