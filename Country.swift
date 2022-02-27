@@ -84,7 +84,6 @@ var countries = [
     Country("ER", "Eritrea"),
     Country("ES", "Spain"),
     Country("ET", "Ethiopia"),
-    Country("EU", "European Union"),
     Country("FI", "Finland"),
     Country("FJ", "Fiji"),
     Country("FK", "Falkland Islands"),
