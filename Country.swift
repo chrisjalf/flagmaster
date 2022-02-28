@@ -11,7 +11,7 @@ class Country {
     var code: String
     var name: String
     
-    init(_ code: String, _ name: String) {
+    init(_ code: String = "", _ name: String = "") {
         self.code = code
         self.name = name
     }
