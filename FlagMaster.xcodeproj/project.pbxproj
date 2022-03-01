@@ -42,7 +42,6 @@
 		FB89270427CB2C3E0041B48A = {
 			isa = PBXGroup;
 			children = (
-				FB89272427CB4B130041B48A /* Country.swift */,
 				FB89270F27CB2C3E0041B48A /* FlagMaster */,
 				FB89270E27CB2C3E0041B48A /* Products */,
 			);
@@ -62,6 +61,7 @@
 				FB89271027CB2C3E0041B48A /* AppDelegate.swift */,
 				FB89271227CB2C3E0041B48A /* SceneDelegate.swift */,
 				FB89271427CB2C3E0041B48A /* ViewController.swift */,
+				FB89272427CB4B130041B48A /* Country.swift */,
 				FB89271627CB2C3E0041B48A /* Main.storyboard */,
 				FB89271927CB2C3F0041B48A /* Assets.xcassets */,
 				FB89271B27CB2C3F0041B48A /* LaunchScreen.storyboard */,
