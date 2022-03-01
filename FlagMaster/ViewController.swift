@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var countryNameLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var imageView1: UIImageView!
     @IBOutlet var imageView2: UIImageView!
     @IBOutlet var imageView3: UIImageView!
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     var selectedCountriesIndex = [Int]()
     var selectedCountry = Country()
     var selectedCountryIndex = -1
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,35 +32,39 @@ class ViewController: UIViewController {
     }
     
     func setCountryFlags() {
-        var countrySet = Set<String>()
         var countryIndexSet = Set<Int>()
+        var selectedCountries = [Country]()
         
-        while countrySet.count < 4 {
+        while countryIndexSet.count < 4 {
             let randomIndex = Int(arc4random_uniform(UInt32(countries.count)))
-            countrySet.insert(countries[randomIndex].code)
             countryIndexSet.insert(randomIndex)
-            
-            print(countries[randomIndex].name, randomIndex, countries[randomIndex].code)
         }
-        print(countrySet)
-        let countryCodes = Array(countrySet)
+        
         selectedCountriesIndex = Array(countryIndexSet)
         
-        let randomIndex = Int.random(in: 0...3)
-        selectedCountry = countries[selectedCountriesIndex[randomIndex]]
-        selectedCountryIndex = randomIndex
-        print(selectedCountry.name, selectedCountryIndex, selectedCountriesIndex, countryCodes)
-        
-        for i in 0...countryCodes.count - 1 {
-            imageViews[i].image = UIImage(named: countryCodes[i])
+        for i in 0...selectedCountriesIndex.count - 1 {
+            let country = countries[selectedCountriesIndex[i]]
+            selectedCountries.append(country)
+            imageViews[i].image = UIImage(named: country.code)
         }
+        
+        selectedCountryIndex = Int.random(in: 0...3)
+        selectedCountry = countries[selectedCountriesIndex[selectedCountryIndex]]
+        countryNameLabel.text = selectedCountry.name
+        
+        countryNameLabel.font = countryNameLabel.font.withSize(selectedCountry.name.count > 30 ? 16 : 24)
+        scoreLabel.font = scoreLabel.font.withSize(selectedCountry.name.count > 30 ? 16 : 24)
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         let choiceIndex = buttons.firstIndex(of: sender.titleLabel!.text!)
         
+        if (choiceIndex == selectedCountryIndex) {
+            score += 1
+            scoreLabel.text = String(score)
+        }
         
-        print(choiceIndex == selectedCountryIndex ? "Correct" : "Wrong")
+        setCountryFlags()
     }
     
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Guess The Flag-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlagMaster" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,8 +23,20 @@
                                         <rect key="frame" x="0.0" y="-140" width="414" height="896"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtx-3d-HwB">
+                                        <rect key="frame" x="16" y="20" width="150" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pb-OX-cCP">
+                                        <rect key="frame" x="383" y="20" width="15" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VKc-Kk-plh">
-                                        <rect key="frame" x="43" y="20" width="328" height="528"/>
+                                        <rect key="frame" x="43" y="69" width="328" height="528"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTB-v6-hs5">
                                                 <rect key="frame" x="0.0" y="0.0" width="328" height="120"/>
@@ -147,10 +159,14 @@
                                     <constraint firstItem="5dP-Ee-JNQ" firstAttribute="leading" secondItem="Vni-Jp-RWU" secondAttribute="leading" id="Hkv-Dy-HdV"/>
                                     <constraint firstItem="Vni-Jp-RWU" firstAttribute="trailing" secondItem="5dP-Ee-JNQ" secondAttribute="trailing" id="L17-Go-jTK"/>
                                     <constraint firstItem="VKc-Kk-plh" firstAttribute="centerX" secondItem="4Q9-CI-5fH" secondAttribute="centerX" id="Lbw-AA-IJd"/>
-                                    <constraint firstItem="VKc-Kk-plh" firstAttribute="top" secondItem="FOI-oR-v1g" secondAttribute="top" constant="20" id="O82-o4-uSd"/>
+                                    <constraint firstItem="VKc-Kk-plh" firstAttribute="top" secondItem="vtx-3d-HwB" secondAttribute="bottom" constant="20" id="O82-o4-uSd"/>
                                     <constraint firstAttribute="bottom" secondItem="VKc-Kk-plh" secondAttribute="bottom" constant="40" id="Skb-1L-Sfx"/>
+                                    <constraint firstItem="vtx-3d-HwB" firstAttribute="leading" secondItem="Vni-Jp-RWU" secondAttribute="leading" constant="16" id="WQq-0c-qBx"/>
+                                    <constraint firstItem="vtx-3d-HwB" firstAttribute="top" secondItem="FOI-oR-v1g" secondAttribute="top" constant="20" id="af9-h1-U12"/>
                                     <constraint firstItem="Vni-Jp-RWU" firstAttribute="trailing" secondItem="VKc-Kk-plh" secondAttribute="trailing" priority="750" constant="16" id="erf-ID-TC9"/>
+                                    <constraint firstItem="5pb-OX-cCP" firstAttribute="top" secondItem="FOI-oR-v1g" secondAttribute="top" constant="20" id="mLr-Pi-QDm"/>
                                     <constraint firstItem="VKc-Kk-plh" firstAttribute="leading" secondItem="Vni-Jp-RWU" secondAttribute="leading" priority="750" constant="16" id="tX3-Yv-37i"/>
+                                    <constraint firstItem="Vni-Jp-RWU" firstAttribute="trailing" secondItem="5pb-OX-cCP" secondAttribute="trailing" constant="16" id="uyl-bq-PoQ"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="FOI-oR-v1g"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Vni-Jp-RWU"/>
@@ -167,12 +183,14 @@
                             <constraint firstItem="4Q9-CI-5fH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zue-QB-Swx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="FAm-Dj-b4d"/>
+                    <navigationItem key="navigationItem" title="Guess The Flag" id="FAm-Dj-b4d"/>
                     <connections>
+                        <outlet property="countryNameLabel" destination="vtx-3d-HwB" id="mUX-bd-mUu"/>
                         <outlet property="imageView1" destination="xch-2b-nuQ" id="bfA-kq-IUL"/>
                         <outlet property="imageView2" destination="YOq-do-ny7" id="khv-Ht-17Q"/>
                         <outlet property="imageView3" destination="7LL-2V-iTM" id="vWe-wS-c7o"/>
                         <outlet property="imageView4" destination="VUT-IK-GGx" id="U5g-pT-w7T"/>
+                        <outlet property="scoreLabel" destination="5pb-OX-cCP" id="gyk-7v-yQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
