@@ -29,35 +29,30 @@ class ViewController: UIViewController {
     }
     
     func setCountryFlags() {
-        var countrySet = Set<String>()
         var countryIndexSet = Set<Int>()
         
-        while countrySet.count < 4 {
+        while countryIndexSet.count < 4 {
             let randomIndex = Int(arc4random_uniform(UInt32(countries.count)))
-            countrySet.insert(countries[randomIndex].code)
             countryIndexSet.insert(randomIndex)
-            
-            print(countries[randomIndex].name, randomIndex, countries[randomIndex].code)
         }
-        print(countrySet)
-        let countryCodes = Array(countrySet)
+        
         selectedCountriesIndex = Array(countryIndexSet)
+        var selectedCountries = [Country]()
         
-        let randomIndex = Int.random(in: 0...3)
-        selectedCountry = countries[selectedCountriesIndex[randomIndex]]
-        selectedCountryIndex = randomIndex
-        print(selectedCountry.name, selectedCountryIndex, selectedCountriesIndex, countryCodes)
-        
-        for i in 0...countryCodes.count - 1 {
-            imageViews[i].image = UIImage(named: countryCodes[i])
+        for i in 0...selectedCountriesIndex.count - 1 {
+            let country = countries[selectedCountriesIndex[i]]
+            selectedCountries.append(country)
+            imageViews[i].image = UIImage(named: country.code)
         }
+        
+        selectedCountryIndex = Int.random(in: 0...3)
+        selectedCountry = countries[selectedCountriesIndex[selectedCountryIndex]]
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         let choiceIndex = buttons.firstIndex(of: sender.titleLabel!.text!)
         
-        
-        print(choiceIndex == selectedCountryIndex ? "Correct" : "Wrong")
+        setCountryFlags()
     }
     
 }
