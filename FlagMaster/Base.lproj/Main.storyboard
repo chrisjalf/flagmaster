@@ -200,7 +200,7 @@
         <!--Guess The Name-->
         <scene sceneID="ZD0-Z9-JkE">
             <objects>
-                <viewController id="dSc-Rx-NTo" sceneMemberID="viewController">
+                <viewController id="dSc-Rx-NTo" customClass="GuessTheNameViewController" customModule="FlagMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IJY-iy-9Bj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +229,9 @@
                                                     <color key="baseForegroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="dSc-Rx-NTo" eventType="touchUpInside" id="VAH-5k-lco"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWM-9i-ElS">
                                                 <rect key="frame" x="40" y="361" width="334" height="65"/>
@@ -241,6 +244,9 @@
                                                     <color key="baseForegroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="dSc-Rx-NTo" eventType="touchUpInside" id="XEc-lU-6dv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-vO-XBZ">
                                                 <rect key="frame" x="40" y="442" width="334" height="65"/>
@@ -253,6 +259,9 @@
                                                     <color key="baseForegroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="dSc-Rx-NTo" eventType="touchUpInside" id="92d-UQ-fai"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWf-OA-7Nd">
                                                 <rect key="frame" x="40" y="523" width="334" height="65"/>
@@ -265,6 +274,9 @@
                                                     <color key="baseForegroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="dSc-Rx-NTo" eventType="touchUpInside" id="AwR-FU-Hq4"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-ru-joa">
                                                 <rect key="frame" x="387" y="220" width="11" height="21"/>
@@ -321,6 +333,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Guess The Name" id="BrW-J1-nFA"/>
+                    <connections>
+                        <outlet property="button1" destination="UMR-xr-Feu" id="ebh-VI-JcV"/>
+                        <outlet property="button2" destination="DWM-9i-ElS" id="EE7-4L-fVZ"/>
+                        <outlet property="button3" destination="IS3-vO-XBZ" id="tpf-mV-aMc"/>
+                        <outlet property="button4" destination="ZWf-OA-7Nd" id="cT6-50-LGg"/>
+                        <outlet property="flagImageView" destination="WIw-ZB-ZC7" id="XlZ-EZ-Ogq"/>
+                        <outlet property="scoreLabel" destination="ABL-ru-joa" id="oMX-x1-ngO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIG-Xg-7Vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
