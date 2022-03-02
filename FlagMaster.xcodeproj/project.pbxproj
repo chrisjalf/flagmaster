@@ -14,6 +14,7 @@
 		FB89271A27CB2C3F0041B48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB89271927CB2C3F0041B48A /* Assets.xcassets */; };
 		FB89271D27CB2C3F0041B48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB89271B27CB2C3F0041B48A /* LaunchScreen.storyboard */; };
 		FB89272527CB4B130041B48A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB89272427CB4B130041B48A /* Country.swift */; };
+		FBA5EE4927CFB46600A20651 /* GuessTheNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5EE4827CFB46600A20651 /* GuessTheNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FB89271C27CB2C3F0041B48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB89271E27CB2C3F0041B48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB89272427CB4B130041B48A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FBA5EE4827CFB46600A20651 /* GuessTheNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FB89271027CB2C3E0041B48A /* AppDelegate.swift */,
 				FB89271227CB2C3E0041B48A /* SceneDelegate.swift */,
 				FB89271427CB2C3E0041B48A /* ViewController.swift */,
+				FBA5EE4827CFB46600A20651 /* GuessTheNameViewController.swift */,
 				FB89272427CB4B130041B48A /* Country.swift */,
 				FB89271627CB2C3E0041B48A /* Main.storyboard */,
 				FB89271927CB2C3F0041B48A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				FB89271527CB2C3E0041B48A /* ViewController.swift in Sources */,
 				FB89271127CB2C3E0041B48A /* AppDelegate.swift in Sources */,
 				FB89271327CB2C3E0041B48A /* SceneDelegate.swift in Sources */,
+				FBA5EE4927CFB46600A20651 /* GuessTheNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
